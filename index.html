@@ -24,7 +24,7 @@
   <div class="container px-4">
     <a class="navbar-brand fw-bold text-gradient" href="#">Alysha.</a>
 
-    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+    <button class="navbar-toggler custom-toggler" type="button">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -588,7 +588,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // Navbar Sticky Effect
+        // Navbar Sticky Effect (Pill size change)
         if (navbar) {
             window.scrollY > 30 ? navbar.classList.add("nav-scrolled") : navbar.classList.remove("nav-scrolled");
         }
@@ -603,7 +603,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const observerOptions = {
         root: null,
-        rootMargin: '-20% 0px -70% 0px', // Trigger saat section mendominasi layar
+        rootMargin: '-20% 0px -70% 0px', 
         threshold: 0
     };
 
@@ -623,15 +623,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
     sections.forEach(section => observer.observe(section));
 
-    // --- 6. Navbar Toggle & Auto-Close (Mobile Fix) ---
+    // --- 6. Navbar Toggle & Auto-Close (FIXED) ---
     const menuCollapse = document.getElementById('navMenu');
-    if (menuCollapse) {
+    const toggler = document.querySelector('.navbar-toggler');
+
+    if (menuCollapse && toggler) {
+        // Inisialisasi Bootstrap Collapse instance secara manual
         const bsCollapse = new bootstrap.Collapse(menuCollapse, { toggle: false });
 
+        // Handle Klik Tombol Hamburger (Buka/Tutup)
+        toggler.onclick = function() {
+            bsCollapse.toggle();
+        };
+
+        // Handle Klik Link (Otomatis Tutup di Mobile)
         navLinks.forEach((l) => {
-            l.addEventListener('click', () => { 
-                // Jika di mode mobile, tutup menu setelah diklik
-                if (window.innerWidth < 992) {
+            l.addEventListener('click', function() { 
+                if (window.innerWidth < 992 && menuCollapse.classList.contains('show')) {
                     bsCollapse.hide(); 
                 }
             });
