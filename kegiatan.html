@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Journey | Alysha Maharani</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Playfair+Display:italic,wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --google-blue: #4285F4;
+            --google-red: #EA4335;
+            --google-yellow: #FBBC05;
+            --google-green: #34A853;
+            --rose-primary: #c75c82;
+            --rose-soft: #fdf2f5;
+            --text-main: #202124;
+            --text-light: #5f6368;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-main);
+            background-color: #ffffff;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* === NAVBAR PILL FLOATING === */
+        .nav-glass {
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 1100px;
+            
+            /* Menggunakan rose-soft dengan sedikit transparansi */
+            background: rgba(253, 242, 245, 0.85); 
+            backdrop-filter: blur(12px); /* Efek blur kaca */
+            -webkit-backdrop-filter: blur(12px);
+            
+            border: 1px solid rgba(199, 92, 130, 0.15);
+            border-radius: 100px; /* Bentuk Pill Sempurna */
+            padding: 10px 25px;
+            height: auto;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 10px 30px rgba(199, 92, 130, 0.12);
+        }
+
+        /* Pastikan ini ada di paling atas file CSS */
+        html {
+            scroll-behavior: smooth;
+            /* Jarak 100px agar section tidak tertutup navbar pill saat di-klik */
+            scroll-padding-top: 100px; 
+        }
+
+        /* Transisi halus saat link berubah menjadi active */
+        .navbar-nav .nav-link {
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        /* === BRAND === */
+        .navbar-brand {
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            background: linear-gradient(90deg, var(--rose-primary), var(--google-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* === NAVIGATION MENU === */
+        .navbar-nav .nav-link {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--text-light) !important;
+            padding: 10px 20px !important;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        /* Hover Effect */
+        .navbar-nav .nav-link:hover {
+            color: var(--google-blue) !important; /* Aksen Google Blue saat hover */
+            background: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Active State */
+        .navbar-nav .nav-link.active {
+            color: #ffffff !important;
+            background: var(--rose-primary);
+            box-shadow: 0 8px 15px rgba(199, 92, 130, 0.3);
+        }
+
+        /* === HIRE ME BUTTON (Nav Version) === */
+        .btn-nav-hire {
+            background: var(--text-main);
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-nav-hire:hover {
+            background: var(--rose-primary);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(199, 92, 130, 0.3);
+            color: #fff;
+        }
+
+        /* === MOBILE TOGGLER CUSTOM === */
+        .custom-toggler {
+            border: none;
+            padding: 0;
+        }
+
+        .custom-toggler:focus {
+            box-shadow: none;
+        }
+
+        /* Sticky behavior: Navbar mengecil saat scroll */
+        .nav-scrolled {
+            width: 80%;
+            padding: 5px 20px;
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        /* === HERO === */
+        .hero-story {
+            padding: 250px 0 120px;
+            background: radial-gradient(circle at top right, #fff5f8 0%, #ffffff 50%);
+            position: relative;
+        }
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            font-weight: 800;
+            line-height: 0.95;
+            letter-spacing: -4px;
+            margin-bottom: 35px;
+        }
+        .hero-italic {
+            font-family: 'Playfair Display', serif;
+            color: var(--rose-primary);
+            font-style: italic;
+        }
+        .hero-desc {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            max-width: 650px;
+            border-left: 4px solid var(--google-blue);
+            padding-left: 30px;
+        }
+
+        /* === LABELS === */
+        .story-label {
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--google-blue);
+            display: block;
+            margin-bottom: 20px;
+        }
+        .story-heading {
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -2px;
+            margin-bottom: 40px;
+        }
+
+        /* === PHOTO GALLERY === */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-auto-rows: 350px;
+            grid-gap: 25px;
+            grid-auto-flow: dense;
+        }
+        .gallery-item {
+            position: relative;
+            border-radius: 35px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+        .gallery-item.wide { grid-column: span 2; }
+        .gallery-item img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+        .gallery-item:hover img { transform: scale(1.1); }
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, transparent 70%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 30px;
+            opacity: 0;
+            transition: 0.4s ease;
+        }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+        /* === ACTIVITY & DESIGN CARDS === */
+        .activity-card, .design-card {
+            border: none;
+            background: #f8f9fa;
+            border-radius: 40px;
+            padding: 50px;
+            height: 100%;
+            transition: 0.4s ease;
+        }
+        .activity-card:hover, .design-card:hover {
+            background: #ffffff;
+            box-shadow: 0 40px 80px rgba(199, 92, 130, 0.1);
+            transform: translateY(-10px);
+        }
+        .icon-circle {
+            width: 70px; height: 70px;
+            background: white; border-radius: 22px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.8rem; margin-bottom: 25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.04);
+        }
+
+        /* === SKILLS === */
+        .skill-tag {
+            padding: 12px 25px; background: #f1f3f4; border-radius: 100px;
+            font-weight: 700; font-size: 0.9rem; display: inline-block;
+            margin: 0 10px 12px 0; transition: 0.3s;
+        }
+
+        /* === FOOTER === */
+        .ending-section {
+            padding: 100px 0; background: #111; border-radius: 60px 60px 0 0; color: white;
+        }
+        .social-link {
+            width: 45px; height: 45px; display: inline-flex;
+            align-items: center; justify-content: center;
+            border: 1px solid rgba(255,255,255,0.2); border-radius: 50%;
+            transition: 0.3s; color: white; text-decoration: none;
+        }
+        .social-link:hover { background: white; color: black; transform: scale(1.1); }
+        /* === RESPONSIVE MOBILE (MAX 576px) === */
+@media (max-width: 576px) {
+    /* Navbar Adjustment */
+    .navbar {
+        padding: 15px 0;
+    }
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+
+    /* Hero Section - Mengurangi jarak agar konten langsung terlihat */
+    .hero-story {
+        padding: 140px 0 80px;
+        text-align: center;
+    }
+    .hero-title {
+        font-size: 2.4rem; /* Mengecilkan judul agar tidak "patah" berlebihan */
+        letter-spacing: -1.5px;
+        margin-bottom: 25px;
+    }
+    .hero-desc {
+        font-size: 1rem;
+        padding-left: 0;
+        border-left: none; /* Menghilangkan border kiri agar teks bisa rata tengah */
+        border-top: 3px solid var(--google-blue); /* Pindah ke border atas sebagai aksen */
+        padding-top: 15px;
+        margin: 0 auto;
+    }
+
+    /* Section Headings */
+    .story-heading {
+        font-size: 2rem;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .story-label {
+        text-align: center;
+    }
+
+    /* Gallery - Menjadikan 1 kolom agar foto besar */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 280px; /* Tinggi foto yang ideal di mobile */
+    }
+    .gallery-item.wide {
+        grid-column: span 1; /* Di mobile jangan ada yang wide */
+    }
+    .gallery-overlay {
+        padding: 20px;
+        opacity: 1; /* Di mobile, caption sebaiknya langsung muncul sedikit */
+        background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, transparent 100%);
+    }
+
+    /* Activity & Design Cards */
+    .activity-card, .design-card {
+        padding: 35px 25px;
+        border-radius: 30px;
+        text-align: center;
+    }
+    .icon-circle {
+        margin: 0 auto 20px;
+    }
+
+    /* Skill Tags */
+    .skill-tag {
+        padding: 10px 18px;
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+    }
+
+    /* Vision Box */
+    .vision-box {
+        padding: 30px;
+        margin-top: 30px;
+    }
+
+    /* Epilogue / Footer */
+    .ending-section {
+        padding: 80px 0;
+        border-radius: 40px 40px 0 0;
+    }
+    .ending-section .display-3 {
+        font-size: 2rem;
+        letter-spacing: -1px;
+    }
+}
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top nav-glass">
+  <div class="container px-4">
+    <a class="navbar-brand fw-bold text-gradient" href="#">Alysha.</a>
+
+    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto">
+      <li class="nav-item"><a class="nav-link" href="/Home">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#sertifikat">Portfolio</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contact-cta">Contact</a></li>
+      <li class="nav-item"><a class="nav-link" href="#gsa-highlights">Activity</a></li>
+    </ul>
+      <a href="/Contact" class="btn-nav-hire d-none d-lg-inline-block">Hire Me</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero-story" id="prologue">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-11" data-aos="fade-up">
+                <span class="story-label">The Prologue</span>
+                <h1 class="hero-title">
+                    Dentistry student by day, <br>
+                    <span class="hero-italic">Creative Explorer</span> by night.
+                </h1>
+                <p class="hero-desc mt-4">
+                    Saya percaya bahwa masa perkuliahan adalah tentang mengeksplorasi batas. 
+                    Inilah rekaman jejak saya membangun dampak melalui desain dan kepemimpinan komunitas.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="chapters" class="pb-5">
+    <div class="container">
+        <div class="row mb-5" data-aos="fade-up">
+            <div class="col-lg-7">
+                <span class="story-label" style="color: var(--google-red);">Chapter 01</span>
+                <h2 class="story-heading">The Visual Memoir.</h2>
+            </div>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item wide" data-aos="zoom-in">
+                <img src="img/gallery1.jpg" alt="Lab">
+                <div class="gallery-overlay">
+                    <h5 class="fw-bold">Clinical Discipline</h5>
+                    <p class="small mb-0">Melatih akurasi klinis sebagai pondasi profesionalisme medis.</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                <img src="img/gallery2.jpg" alt="Organization">
+                <div class="gallery-overlay">
+                    <h5 class="fw-bold">Leading Teams</h5>
+                    <p class="small mb-0">Berkolaborasi lintas divisi untuk mencapai target komunitas.</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                <img src="img/gallery3.jpg" alt="Outreach">
+                <div class="gallery-overlay">
+                    <h5 class="fw-bold">Health Outreach</h5>
+                    <p class="small mb-0">Edukasi kesehatan langsung ke masyarakat.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="roles" class="py-5" style="background: #fafafa;">
+    <div class="container py-5">
+        <div class="row mb-5" data-aos="fade-up">
+            <div class="col-lg-6">
+                <span class="story-label" style="color: var(--google-green);">Chapter 02</span>
+                <h2 class="story-heading">Defining Roles.</h2>
+                <p class="text-muted">Membangun pengalaman profesional melalui tanggung jawab nyata di organisasi kampus.</p>
+            </div>
+        </div>
+        <div class="row g-4 text-start">
+            <div class="col-lg-6" data-aos="fade-up">
+                <div class="activity-card shadow-sm">
+                    <div class="icon-circle text-primary"><i class="bi bi-pencil-square"></i></div>
+                    <h3 class="fw-bold mb-3">Creative Media Lead</h3>
+                    <p class="text-muted small">Mengelola branding visual organisasi. Dari desain feed hingga publikasi fisik, saya belajar manajemen aset dan deadline ketat.</p>
+                    <div class="mt-4 pt-3 border-top small fw-bold text-primary">Managed 10+ Creators & 50+ Visual Campaigns</div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="activity-card shadow-sm">
+                    <div class="icon-circle text-danger"><i class="bi bi-cpu-fill"></i></div>
+                    <h3 class="fw-bold mb-3">Tech-Sync Coordinator</h3>
+                    <p class="text-muted small">Mengintegrasikan Google Workspace untuk manajemen data peserta seminar nasional, memangkas waktu pendaftaran secara signifikan.</p>
+                    <div class="mt-4 pt-3 border-top small fw-bold text-danger">Increased Workflow Efficiency by 40%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="showcase" class="py-5">
+    <div class="container py-5">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <span class="story-label">Chapter 03</span>
+            <h2 class="story-heading">Creative Showcase.</h2>
+            <p class="text-muted">Kumpulan karya desain visual yang saya kembangkan untuk kebutuhan branding dan kampanye digital.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="zoom-in">
+                <div class="gallery-item" style="height: 400px;">
+                    <img src="img/design1.jpg" alt="UIUX Design">
+                    <div class="gallery-overlay">
+                        <h5 class="fw-bold">UI/UX Exploration</h5>
+                        <p class="small mb-0">Eksplorasi antarmuka aplikasi kesehatan yang intuitif.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="gallery-item" style="height: 400px;">
+                    <img src="img/design2.jpg" alt="Poster">
+                    <div class="gallery-overlay">
+                        <h5 class="fw-bold">Visual Campaign</h5>
+                        <p class="small mb-0">Branding visual untuk acara seminar kesehatan nasional.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="gallery-item" style="height: 400px;">
+                    <img src="img/design3.jpg" alt="Graphic">
+                    <div class="gallery-overlay">
+                        <h5 class="fw-bold">Graphic Identity</h5>
+                        <p class="small mb-0">Pembuatan logo dan aset identitas organisasi mahasiswa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="vision" class="py-5" style="background: var(--rose-soft);">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+                <span class="story-label" style="color: var(--google-blue);">Chapter 04</span>
+                <h2 class="story-heading">Community Vision.</h2>
+                <p class="text-muted">Misi saya adalah mematahkan stigma bahwa mahasiswa kesehatan tidak perlu melek teknologi. Saya ingin menjadi jembatan literasi digital medis.</p>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="design-card bg-white shadow-lg" style="border-radius: 40px;">
+                    <h5 class="fw-bold mb-4"><i class="bi bi-lightbulb text-warning me-2"></i> GSA Mission 2026:</h5>
+                    <ul class="list-unstyled small">
+                        <li class="mb-3"><i class="bi bi-check2-circle text-success me-2"></i> Membangun komunitas literasi digital medis.</li>
+                        <li class="mb-3"><i class="bi bi-check2-circle text-success me-2"></i> Workshop pemanfaatan AI untuk edukasi kesehatan.</li>
+                        <li><i class="bi bi-check2-circle text-success me-2"></i> Kolaborasi lintas fakultas (Health x Creative).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-white">
+    <div class="container py-5 text-center">
+        <span class="story-label">Chapter 05</span>
+        <h2 class="story-heading">The Toolstack.</h2>
+        <div class="col-lg-10 mx-auto" data-aos="fade-up">
+            <span class="skill-tag shadow-sm">Figma (UI/UX)</span>
+            <span class="skill-tag shadow-sm">Adobe Creative Suite</span>
+            <span class="skill-tag shadow-sm">Google Workspace</span>
+            <span class="skill-tag shadow-sm">Brand Identity</span>
+            <span class="skill-tag shadow-sm">Community Leadership</span>
+            <span class="skill-tag shadow-sm">Public Speaking</span>
+        </div>
+    </div>
+</section>
+
+<footer id="epilogue" class="ending-section text-center">
+    <div class="container">
+        <div class="row justify-content-center" data-aos="zoom-in">
+            <div class="col-lg-8">
+                <span class="story-label text-white opacity-50 mb-4">The Epilogue</span>
+                <h2 class="display-3 fw-bold mb-5">Building the future, <br> <span class="hero-italic" style="color: var(--google-blue);">One Chapter</span> at a time.</h2>
+                <a href="mailto:aksana@example.com" class="btn btn-light rounded-pill px-5 py-3 fw-bold shadow-lg">Start a Conversation</a>
+                <div class="mt-5 pt-5 border-top border-secondary d-flex justify-content-center gap-3">
+                    <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-envelope-at"></i></a>
+                </div>
+                <p class="small mt-5 opacity-50">© 2026 Aksana Zachri Satria | Purwokerto, Indonesia</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 1000, once: true });
+    window.onscroll = function() {
+        var nav = document.getElementById('mainNav');
+        if (window.pageYOffset > 50) nav.classList.add("scrolled");
+        else nav.classList.remove("scrolled");
+    };
+</script>
+</body>
+</html>

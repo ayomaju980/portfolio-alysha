@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
+
+   <!--my style-->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Portfolio Website | Alysha Maharani</title>
+    <link rel="icon" href="img/Logoo.png" type="image/png">
+  </head>
+  <body>
+<!-- 🌐 NAVBAR DENGAN HIRE ME BADGE -->
+<nav class="navbar navbar-expand-lg fixed-top nav-glass">
+  <div class="container px-4">
+    <a class="navbar-brand fw-bold text-gradient" href="#">Alysha.</a>
+
+    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto">
+      <li class="nav-item"><a class="nav-link" href="#Profile">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#sertifikat">Portfolio</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contact-cta">Contact</a></li>
+      <li class="nav-item"><a class="nav-link" href="/Activity">Activity</a></li>
+    </ul>
+      <a href="/Contact" class="btn-nav-hire d-none d-lg-inline-block">Hire Me</a>
+    </div>
+  </div>
+</nav>
+
+<section id="Profile">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 text-center">
+        
+        <h1 class="fw-bold">Hello,</h1>
+        <h2 class="fw-bold">
+          <span id="typed-name"></span><span class="cursor">|</span>
+        </h2>
+
+        <h4 class="mb-4">Dental Medicine Student & Community Enthusiast</h4>
+
+        <div class="description-wrapper">
+          <p>
+            Dental Medicine undergraduate at Institut Kesehatan Helvetia with active involvement in student organizations that strengthen leadership and communication skills. Deeply interested in digital technology and its impact on education and communities, and highly motivated to contribute through the Google Student Ambassador program.
+        </p>
+        </div>
+
+        <div class="button-container justify-content-center">
+          <a href="/Curiculum-Vitae" class="btn btn-primary">View My Resume</a>
+          <a href="/Contact" class="btn btn-secondary">Let’s Connect</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- About Me -->
+<section id="about" class="about-section py-5">
+  <div class="container px-4 px-lg-5">
+
+    <!-- FOTO PROFIL KIRI -->
+    <div class="about-left">
+      <div class="about-img-wrapper">
+        <img src="img/alysha.png" alt="alysha" class="about-img">
+      </div>
+    </div>
+
+    <!-- TEKS KANAN -->
+    <div class="about-right">
+      <h1 class="section-title">About Me</h1>
+
+      <p class="fm">
+        Hi, I'm <strong>Alysha Maharani Lubis</strong> — a dedicated Dental Medicine undergraduate at 
+        Institut Kesehatan Helvetia with a strong passion for community development, leadership, and 
+        public communication. Throughout my academic journey, I’ve actively participated in student 
+        organizations and campus activities that strengthened my ability to collaborate, coordinate programs, 
+        and support impactful initiatives.
+      </p>
+
+      <p class="fm">
+        Beyond the field of dentistry, I am deeply interested in digital technology and its role in education 
+        and social empowerment. I enjoy learning new tools, exploring innovative ideas, and contributing to 
+        positive change—values that align strongly with the Google Student Ambassador program and its mission 
+        to inspire and uplift student communities.
+      </p>
+
+      <!-- GRID SKILLS -->
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <i class="bi bi-people-fill skill-icon"></i>
+          <span>Team Collaboration</span>
+        </div>
+
+        <div class="skill-card">
+          <i class="bi bi-megaphone-fill skill-icon"></i>
+          <span>Public Speaking</span>
+        </div>
+
+        <div class="skill-card">
+          <i class="bi bi-lightbulb-fill skill-icon"></i>
+          <span>Leadership</span>
+        </div>
+
+        <div class="skill-card">
+          <i class="bi bi-calendar-event-fill skill-icon"></i>
+          <span>Event Management</span>
+        </div>
+
+        <div class="skill-card">
+          <i class="bi bi-chat-dots-fill skill-icon"></i>
+          <span>Communication Skills</span>
+        </div>
+
+        <div class="skill-card">
+          <i class="bi bi-laptop skill-icon"></i>
+          <span>Digital Literacy</span>
+        </div>
+
+        <div class="skill-card">
+          <i class="bi bi-people skill-icon"></i>
+          <span>Community Engagement</span>
+        </div>
+
+        <div class="skill-card">
+          <i class="bi bi-puzzle-fill skill-icon"></i>
+          <span>Problem Solving</span>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+<!--end about me-->
+
+
+
+<section id="Path" class="edu-section py-5">
+    <div class="container py-5">
+        <div class="text-center mb-5 mt-4" data-aos="fade-up">
+            <span class="badge-accent">Journey So Far</span>
+            <h2 class="header-display mt-3">Education & <span class="text-outline">Leadership</span></h2>
+            <p class="text-muted mx-auto mt-3" style="max-width: 600px; color: var(--text-light);">
+                Membangun pondasi di dunia medis sambil aktif memimpin transformasi digital di lingkungan komunitas mahasiswa.
+            </p>
+        </div>
+
+        <div class="path-container mt-5">
+            <div class="path-line"></div>
+
+            <div class="path-item" data-aos="fade-right">
+                <div class="path-dot main-dot"><i class="bi bi-mortarboard-fill"></i></div>
+                <div class="path-info info-left">
+                    <span class="path-year">2024 — Present</span>
+                    <h4 class="path-title">Institut Kesehatan Helvetia </h4>
+                    <p class="path-desc">Bachelor of Dental Medicine • Faculty of Medicine</p>
+                    <div class="path-impact" style="color: var(--google-blue);">Maintaining high academic standards in clinical studies.</div>
+                </div>
+            </div>
+
+            <div class="path-item" data-aos="fade-left">
+                <div class="path-dot" style="background: var(--google-blue); border-color: var(--google-blue);"><i class="bi bi-people-fill"></i></div>
+                <div class="path-info info-right">
+                    <span class="path-year" style="color: var(--google-blue);">2024 — Present</span>
+                    <h4 class="path-title">Student Executive Board (BEM)</h4>
+                    <p class="path-desc">Head of Creative Media Division</p>
+                    <div class="path-impact" style="color: var(--google-blue);">Leading 10+ creators to redefine campus visual communications.</div>
+                </div>
+            </div>
+
+            <div class="path-item" data-aos="fade-right">
+                <div class="path-dot" style="background: var(--google-red); border-color: var(--google-red);"><i class="bi bi-megaphone-fill"></i></div>
+                <div class="path-info info-left">
+                    <span class="path-year" style="color: var(--google-red);">2023</span>
+                    <h4 class="path-title">National Health Seminar</h4>
+                    <p class="path-desc">Lead Digital Coordinator</p>
+                    <div class="path-impact" style="color: var(--google-red);">Streamlined digital workflows for over 500 participants.</div>
+                </div>
+            </div>
+
+            <div class="path-item" data-aos="fade-left">
+                <div class="path-dot" style="background: var(--google-yellow); border-color: var(--google-yellow);"><i class="bi bi-stars"></i></div>
+                <div class="path-info info-right">
+                    <span class="path-year" style="color: var(--google-yellow);">2024</span>
+                    <h4 class="path-title">Google Community Enthusiast</h4>
+                    <p class="path-desc">Digital Literacy & Tech Advocate</p>
+                    <div class="path-impact" style="color: var(--google-yellow);">Integrating Google Workspace solutions for organization efficiency.</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="gsa-highlights py-5">
+  <div class="container text-center mb-5">
+    <h6 class="gsa-subtitle">Google Student Ambassador</h6>
+    <h2 class="gsa-title">Why I’m a Great Fit</h2>
+    <p class="gsa-desc">
+      As a passionate student in technology and community building, I actively
+      contribute, lead, and inspire others through campus activities.
+      Here’s what I bring to the Google Student Ambassador program.
+    </p>
+  </div>
+
+  <div class="container">
+    <div class="row g-4 justify-content-center">
+
+      <!-- CARD 1 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="gsa-card">
+          <div class="gsa-icon-circle">
+            <i class="bi bi-people-fill"></i>
+          </div>
+          <h3>Community Driven</h3>
+          <p>
+            Actively involved in campus organizations, mentoring junior students,
+            and participating in collaborative learning activities.
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="gsa-card">
+          <div class="gsa-icon-circle">
+            <i class="bi bi-lightbulb-fill"></i>
+          </div>
+          <h3>Leadership Mindset</h3>
+          <p>
+            Experience leading small initiatives and ensuring clear communication,
+            teamwork, and problem-solving through campus events.
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="gsa-card">
+          <div class="gsa-icon-circle">
+            <i class="bi bi-bullseye"></i>
+          </div>
+          <h3>Growth & Tech Passion</h3>
+          <p>
+            Enthusiast in technology, design, and collaborative innovation,
+            continuously learning new tools and platforms.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="sertifikat" class="py-5">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <h2 class="display-title">
+        <span class="emoji-icon">🏅</span>
+        Certificates <span class="text-gradient">& Courses</span>
+      </h2>
+    </div>
+
+    <div class="certificates-container">
+      <div class="nav-controls d-none d-md-flex">
+        <button class="nav-circle-btn prev" id="prevBtn">❮</button>
+        <button class="nav-circle-btn next" id="nextBtn">❯</button>
+      </div>
+
+      <div class="certificates-slider" id="certSlider">
+
+        <!-- ========== CERT 1 ========== -->
+        <div class="cert-item">
+          <a href="https://example.com/cert-1" class="cert-anchor" target="_blank">
+            <div class="cert-modern-card">
+
+              <div class="cert-img-holder">
+                <img src="/assets/certificates/cert1.jpg" alt="UI/UX Fundamentals">
+                <div class="cert-badge-floating">Verify Credential</div>
+              </div>
+
+              <div class="cert-info">
+                <span class="cert-org">Google</span>
+                <h3 class="cert-name">UI/UX Design Fundamentals</h3>
+
+                <div class="cert-footer">
+                  <span class="cert-date">
+                    <i class="bi bi-calendar3 me-1"></i>
+                    Jan 2024
+                  </span>
+                  <div class="cert-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M8.636 3.5a.5...."/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </a>
+        </div>
+
+        <!-- ========== CERT 2 ========== -->
+        <div class="cert-item">
+          <a href="https://example.com/cert-2" class="cert-anchor" target="_blank">
+            <div class="cert-modern-card">
+
+              <div class="cert-img-holder">
+                <img src="/assets/certificates/cert2.jpg" alt="Frontend Course">
+                <div class="cert-badge-floating">Verify Credential</div>
+              </div>
+
+              <div class="cert-info">
+                <span class="cert-org">Dicoding</span>
+                <h3 class="cert-name">Belajar Frontend Web Developer</h3>
+
+                <div class="cert-footer">
+                  <span class="cert-date">
+                    <i class="bi bi-calendar3 me-1"></i>
+                    Oct 2023 – Dec 2023
+                  </span>
+                  <div class="cert-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"><path d="..."/></svg>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </a>
+        </div>
+
+        <!-- ========== CERT 3 ========== -->
+        <div class="cert-item">
+          <a href="https://example.com/cert-3" class="cert-anchor" target="_blank">
+            <div class="cert-modern-card">
+
+              <div class="cert-img-holder">
+                <img src="/assets/certificates/cert3.jpg" alt="Figma Masterclass">
+                <div class="cert-badge-floating">Verify Credential</div>
+              </div>
+
+              <div class="cert-info">
+                <span class="cert-org">BuildWithAngga</span>
+                <h3 class="cert-name">Figma UI/UX Masterclass</h3>
+
+                <div class="cert-footer">
+                  <span class="cert-date">
+                    <i class="bi bi-calendar3 me-1"></i>
+                    Jul 2022
+                  </span>
+                  <div class="cert-arrow">
+                    <svg width="14" height="14"><path d="..."/></svg>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- LinkedIn CTA -->
+    <div class="linkedin-cta text-center mt-5">
+      <a href="https://www.linkedin.com/in/aksanazachri" target="_blank" class="linkedin-btn">
+        <span class="btn-content">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="20" class="me-2">
+          Discover more on LinkedIn
+        </span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact-cta" class="contact-cta-section">
+  <div class="container">
+    <div class="contact-cta-wrapper">
+      <div class="cta-decoration"></div>
+      
+      <div class="contact-cta-content">
+        <h2 class="cta-title">Let’s Connect & <span class="text-gradient">Collaborate!</span></h2>
+        <p class="cta-subtext">
+          Whether you have a question, a project idea, or just want to say hi, my inbox is always open. 
+          I’m currently looking for new opportunities and collaborations!
+        </p>
+
+        <div class="cta-buttons">
+          <a href="#" target="_blank" class="cta-btn linkedin">
+            <div class="btn-icon"><i class="bi bi-linkedin"></i></div>
+            <span>LinkedIn</span>
+          </a>
+
+          <a href="https://wa.me/628XXXXXXXXX" target="_blank" class="cta-btn whatsapp">
+            <div class="btn-icon"><i class="bi bi-whatsapp"></i></div>
+            <span>WhatsApp</span>
+          </a>
+
+          <a href="#" class="cta-btn email">
+            <div class="btn-icon"><i class="bi bi-envelope-heart-fill"></i></div>
+            <span>Email Me</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer-main">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <h5 class="brand-name">Alysha</h5>
+        <p class="brand-desc">
+          Dental Medicine student at IKH & aspiring tech leader. 
+          Merging healthcare insights with digital innovation to empower 
+          communities through the Google Student Ambassador program.
+        </p>
+        <div class="footer-social">
+          <a href="#" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="#" target="_blank" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          <a href="#" target="_blank" title="Behance"><i class="bi bi-behance"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links-group">
+        <h6>Navigation</h6>
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#sertifikat">Certificates</a></li>
+          <li><a href="#portfolio">Works</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-group">
+        <h6>Resources</h6>
+        <ul>
+          <li><a href="#">Curiculum Vitae</a></li>
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="#">Design Tools</a></li>
+          <li><a href="#">Medical Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-group">
+        <h6>Contact</h6>
+        <ul class="contact-info">
+          <li><i class="bi bi-geo-alt-fill"></i> Medan, Indonesia</li>
+          <li><i class="bi bi-envelope-at-fill"></i> alysha@example.com</li>
+          <li><a href="#" class="status-badge">Available for Collab</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year">2026</span> Alysha. Crafted with <i class="bi bi-heart-fill text-danger"></i> and Passion.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Footer End -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // --- 1. Update Year ---
+    const yearEl = document.getElementById("year");
+    if(yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // --- 2. Typing Effect ---
+    const text = "I'm Alysha Maharani Lubis";
+    const typedName = document.getElementById("typed-name");
+    let index = 0;
+    if(typedName) {
+        function type() {
+            if (index < text.length) {
+                typedName.textContent += text.charAt(index);
+                index++;
+                setTimeout(type, 100);
+            }
+        }
+        type();
+    }
+
+    // --- 3. Certificate Slider Logic ---
+    const slider = document.getElementById('certSlider');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    if (slider && nextBtn && prevBtn) {
+        const getScrollStep = () => {
+            const firstCard = slider.querySelector(".cert-modern-card");
+            return firstCard ? firstCard.offsetWidth + 25 : 350;
+        };
+        nextBtn.onclick = () => slider.scrollBy({ left: getScrollStep(), behavior: "smooth" });
+        prevBtn.onclick = () => slider.scrollBy({ left: -getScrollStep(), behavior: "smooth" });
+    }
+
+    // --- 4. Scroll Animations & Navbar State ---
+    const navbar = document.querySelector(".nav-glass");
+    const handleScroll = () => {
+        // Elements Animation
+        document.querySelectorAll(".scroll-animate").forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+                el.classList.add("visible");
+            }
+        });
+
+        // Navbar Sticky Effect
+        if (navbar) {
+            window.scrollY > 30 ? navbar.classList.add("nav-scrolled") : navbar.classList.remove("nav-scrolled");
+        }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    // --- 5. Auto-Highlight Navbar (ScrollSpy) ---
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section[id]');
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '-20% 0px -70% 0px', // Trigger saat section mendominasi layar
+        threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(id)) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => observer.observe(section));
+
+    // --- 6. Navbar Toggle & Auto-Close (Mobile Fix) ---
+    const menuCollapse = document.getElementById('navMenu');
+    if (menuCollapse) {
+        const bsCollapse = new bootstrap.Collapse(menuCollapse, { toggle: false });
+
+        navLinks.forEach((l) => {
+            l.addEventListener('click', () => { 
+                // Jika di mode mobile, tutup menu setelah diklik
+                if (window.innerWidth < 992) {
+                    bsCollapse.hide(); 
+                }
+            });
+        });
+    }
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- endmyscipt-->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
