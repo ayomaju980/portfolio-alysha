@@ -1063,7 +1063,39 @@ html {
     margin-top: 5px;
     border: 1px solid rgba(199, 92, 130, 0.2);
 }
+/* === AM-CREATIVE LINK STYLING === */
+.footer-credits {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
 
+.am-link {
+    color: var(--rose-primary);
+    text-decoration: none;
+    font-weight: 700;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.am-link:hover {
+    color: var(--google-blue);
+}
+
+/* Efek garis bawah yang muncul saat di-hover */
+.am-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--google-blue);
+    transition: width 0.3s ease;
+}
+
+.am-link:hover::after {
+    width: 100%;
+}
 /* === FOOTER BOTTOM === */
 .footer-bottom {
     display: flex;
